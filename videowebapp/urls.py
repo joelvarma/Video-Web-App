@@ -17,13 +17,12 @@ Including another URLconf
 
 from django.conf.urls import url, include
 from django.contrib import admin
-import videoapp.views
 
 urlpatterns = [
 
     url(r'^accounts/', include('allauth.urls')),
-
+    url(r'api/',include('videoapp.api.urls')),
+    url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'', videoapp.views.videofeed),
-
+    
 ]

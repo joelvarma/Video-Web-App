@@ -46,11 +46,11 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-
+    'rest_framework',
     #customapps
     'videoapp',
     'customusers',
-
+    'corsheaders',
 
 ]
 
@@ -136,4 +136,6 @@ LOGIN_REDIRECT_URL = "/"
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-# LOGIN_URL = '/'
+
+
+CORS_ORIGIN_ALLOW_ALL = True
